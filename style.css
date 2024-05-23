@@ -1,0 +1,128 @@
+@font-face {
+    font-family:pixle;
+    src: url(./fonts/Pixelmania.ttf);
+}
+@font-face {
+    font-family: apple;
+    src: url(./fonts/AppleGaramond.ttf);
+}
+
+*{
+    margin:0;
+    padding:0;
+    
+    box-sizing: border-box;
+
+}
+
+body{
+    height:100vh;
+    background: url('backgroungimg.jpeg');
+    background-size: cover;
+  
+}
+
+header{
+    width: 100%;
+    height: 75px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #fff;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color:black;
+    letter-spacing: 0.05px;
+    /* cursor:pointer; */
+   
+    font-family:pixle ;
+    
+   
+
+}
+
+nav li{
+    display: inline-block;
+    list-style: none;
+    padding: 0px 20px;
+    
+
+}
+a{
+   font-size: 30px;
+   font-weight: 500;
+   font-family: apple;
+   color:black;
+   text-decoration: none;
+   cursor: pointer; 
+   transition: 0.5s;
+}
+/* .tab-links::after{
+    content:'';
+    width:0;
+    height:3px;
+    background: #ff004f;
+    position: absolute;
+    left:0;
+    bottom:-8px;
+    transition:0.5s;
+} */
+
+.tab-links a:hover{
+    opacity:0.5;
+    transform: translateY(-10px);
+}
+
+
+/* -------------Responsive-------------- */
+
+nav .fa-solid{
+    display:none;
+}
+
+@media only screen and (max-width:600px) {
+    body{
+        background-image: url('BImage.png');
+        background-size: cover;
+    }
+    .logo{
+        font-size:21px;
+    }
+
+
+
+    nav .fa-solid{
+        display:block;
+        font-size: 25px;
+    }
+    nav ul{
+        background-color:rgba(255,255,255,0.2);
+        backdrop-filter:blur(10px);
+        
+        position: fixed;
+        top:0;
+        right:-200px;
+        width:200px;
+        height:100vh;
+        padding-top: 50px;
+        z-index:2;
+
+        transition: right .5s ;
+    }
+    nav ul li{
+        display:block;
+        margin: 25px;
+        
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+}
+
