@@ -84,13 +84,13 @@ nav .fa-solid{
     display:none;
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:700px) {
     body{
         background-image: url('BImage.png');
         background-size: cover;
     }
     .logo{
-        font-size:21px;
+        font-size:18px;
     }
 
 
